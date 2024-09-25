@@ -22,24 +22,59 @@ rl.question('Enter the character', (value)=>{
 
 
 
-const readline = require('readline');
+// const readline = require('readline');
 
-const interface = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const interface = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-interface.question('Enter the character ', (value)=> {
-    interface.question('Enter the n times', (max_num)=> {
-        for(let increment = max_num; increment>0 ; increment --){
-            console.log(" ".repeat(increment) + value.repeat(max_num - increment + 1)+
-             value.repeat(max_num- increment));
+// interface.question('Enter the character ', (value)=> {
+//     interface.question('Enter the n times', (max_num)=> {
+//         for(let increment = max_num; increment>0 ; increment --){
+//             console.log(" ".repeat(increment) + value.repeat(max_num - increment + 1)+
+//              value.repeat(max_num- increment));
 
+//         }
+//         for(let increment = 1 ; increment <=max_num ; increment++) {
+//             console.log(" ".repeat(increment)+ value.repeat(max_num-increment+1)+
+//              value.repeat(max_num-increment));
+//         }
+//         interface.close();
+//     })
+// })
+
+
+// const pattaern = (n) => {
+
+//     for(let i = 1; i <=n ; i++){
+//         let arr = [];
+//         for(let j = 1 ; j <= n-i+1 ; j++){
+//            arr.push(j);
+//         }
+//         console.log(arr);
+
+//     }
+
+// }
+
+
+// pattaern(5);
+
+const parrtan = (n) => {
+    for(let i = 1; i < n* 2; i++){
+        let arr = [];
+        for(let j = 1; j <n*2; j++){
+
+            if(i == j || j == n+n - i){
+                arr.push(i);
+            }
+            else{
+                arr.push(' ')
+            }
         }
-        for(let increment = 1 ; increment <=max_num ; increment++) {
-            console.log(" ".repeat(increment)+ value.repeat(max_num-increment+1)+
-             value.repeat(max_num-increment));
-        }
-        interface.close();
-    })
-})
+        console.log(arr.join(' '));
+    }
+}
+
+parrtan(5);
